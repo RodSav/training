@@ -1,6 +1,13 @@
-import org.openqa.selenium.By;
+package TestOOP;
+
+import Pages.AddAddressPage;
+import Pages.AddressPage;
+import Pages.HomePage;
+import Pages.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import Objects.*;
+
 
 import java.util.concurrent.TimeUnit;
 

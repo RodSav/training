@@ -1,3 +1,5 @@
+package Objects;
+
 public class UserAddress {
     private final String country;
     private final String title;
