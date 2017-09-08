@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite1" duration-ms="33015" started-at="2017-09-08T10:58:33Z" finished-at="2017-09-08T10:59:06Z">
+    <groups>
+    </groups>
+    <test name="Nopackage" duration-ms="33015" started-at="2017-09-08T10:58:33Z" finished-at="2017-09-08T10:59:06Z">
+      <class name="TestOOP.TestTestNG">
+        <test-method status="PASS" signature="setUpTest()[pri:0, instance:TestOOP.TestTestNG@5d624da6]" name="setUpTest" is-config="true" duration-ms="4907" started-at="2017-09-08T13:58:28Z" finished-at="2017-09-08T13:58:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpTest -->
+        <test-method status="PASS" signature="testNGTest()[pri:0, instance:TestOOP.TestTestNG@5d624da6]" name="testNGTest" duration-ms="33002" started-at="2017-09-08T13:58:33Z" finished-at="2017-09-08T13:59:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNGTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:TestOOP.TestTestNG@5d624da6]" name="tearDown" is-config="true" duration-ms="623" started-at="2017-09-08T13:59:06Z" finished-at="2017-09-08T13:59:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestOOP.TestTestNG -->
+    </test> <!-- Nopackage -->
+  </suite> <!-- Suite1 -->
+</testng-results>

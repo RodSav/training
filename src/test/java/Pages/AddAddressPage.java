@@ -33,4 +33,8 @@ public class AddAddressPage {
             throw  new AssertionError();
         return new AddAddressPage(driver);
     }
+
+    public String getNotification() {
+        return driver.findElement(By.xpath(FLASH_MESSAGE_XPATH)).getText();
+    }
 }
