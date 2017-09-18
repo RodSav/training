@@ -4,7 +4,7 @@ public class AddAddressLocator {
     public static String ADDRESS_COUNTRY_DROPDOWN_XPATH = ".//*[@id='address.country']";
     public static String UNITED_STATES_XPATH = "//*[@id='address.country']//option[contains(text(), 'United States')]";
     public static String TITLE_DROPDOWN_XPATH = "//*[@id='address.title']";
-    public static String TITLE_MR_XPATH = "//*[@id='address.title']//option[contains(text(), 'Mr')]";
+    public static String TITLE_MR_XPATH = "//*[@id='address.title']//option[contains(text(), 'Mrs')]";
     public static String FIRSTNAME_FIELD_XPATH = "//*[@id='address.firstName']";
     public static String LASTNAME_FIELD_XPATH = "//*[@id='address.surname']";
     public static String ADDRESS1_FIELD_XPATH = "//*[@id='address.line1']";

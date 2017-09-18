@@ -18,7 +18,9 @@ public class AddAddressPage {
         driver.findElement(By.xpath(UNITED_STATES_XPATH)).click();
         driver.findElement(By.xpath(TITLE_DROPDOWN_XPATH)).click();
         driver.findElement(By.xpath(TITLE_MR_XPATH)).click();
+        driver.findElement(By.xpath(FIRSTNAME_FIELD_XPATH)).clear();
         driver.findElement(By.xpath(FIRSTNAME_FIELD_XPATH)).sendKeys(userAddress.getFirstName());
+        driver.findElement(By.xpath(LASTNAME_FIELD_XPATH)).clear();
         driver.findElement(By.xpath(LASTNAME_FIELD_XPATH)).sendKeys(userAddress.getLastName());
         driver.findElement(By.xpath(ADDRESS1_FIELD_XPATH)).sendKeys(userAddress.getAddress1());
         driver.findElement(By.xpath(CITY_XPATH)).sendKeys(userAddress.getCity());
@@ -30,6 +32,18 @@ public class AddAddressPage {
         String flashMessage = driver.findElement(By.xpath(FLASH_MESSAGE_XPATH)).getText();
         //assertFalse
         if (!flashMessage.contains("Your address was created."))
+            throw  new AssertionError();
+        return new AddAddressPage(driver);
+    }
+
+    public AddAddressPage updateAddress() {
+        driver.findElement(By.xpath(TITLE_MR_XPATH)).click();
+        driver.findElement(By.xpath(FIRSTNAME_FIELD_XPATH)).clear();
+        driver.findElement(By.xpath(FIRSTNAME_FIELD_XPATH)).sendKeys( "Updated");
+        driver.findElement(By.xpath(SUBMIT_BUTTON_XPATH)).click();
+        String flashMessage = driver.findElement(By.xpath(FLASH_MESSAGE_XPATH)).getText();
+        //assertFalse
+        if (!flashMessage.contains("Your address was updated."))
             throw  new AssertionError();
         return new AddAddressPage(driver);
     }

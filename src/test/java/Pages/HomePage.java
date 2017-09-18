@@ -2,6 +2,7 @@ package Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import static Locators.HomePageLocators.*;
 
 public class HomePage {
     private WebDriver driver;
@@ -20,7 +21,7 @@ public class HomePage {
 
     public AddressPage openAddressPage() {
         driver.findElement(By.linkText("My Account")).click();
-        driver.findElement(By.xpath(".//*[@id='accNavComponentDesktopOne']/ul/li[6]/a")).click();
+        driver.findElement(By.xpath(ADDRESS_BOOK_MY_ACCOUNT)).click();
         return new AddressPage(driver);
     }
 }

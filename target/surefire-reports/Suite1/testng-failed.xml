@@ -6,8 +6,9 @@
       <class name="TestOOP.TestTestNG">
         <methods>
           <include name="tearDown"/>
+          <include name="testUpdateAddress"/>
           <include name="setUpTest"/>
-          <include name="testNGTest"/>
+          <include name="testRemoveAddress"/>
         </methods>
       </class> <!-- TestOOP.TestTestNG -->
     </classes>

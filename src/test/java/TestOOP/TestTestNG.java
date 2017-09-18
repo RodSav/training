@@ -6,11 +6,12 @@ import Pages.HomePage;
 import Pages.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import Objects.*;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import static org.testng.Assert.*;
 
 import java.util.concurrent.TimeUnit;
 
@@ -20,14 +21,17 @@ public class TestTestNG {
     private User testUser;
     private UserAddress userAddress;
 
-    @BeforeSuite
+    @BeforeMethod
     public void setUpTest() {
-        driver = new FirefoxDriver();
+        DesiredCapabilities caps = new DesiredCapabilities();
+        caps.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+        caps.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
+        driver = new FirefoxDriver(caps);
         driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 
-        testProject = new TestProject("https://usabb-dev.zaelab.com/");
+        testProject = new TestProject("https://demo-b2b.zaelab.com/yb2bacceleratorstorefront/");
         testUser = new User("matheu.silva@rustic-hw.com", "12341234");
         userAddress = new UserAddress.UserAddressBuilder()
                 .country("United states")
@@ -43,17 +47,36 @@ public class TestTestNG {
     }
 
     @Test
-    public void testNGTest() {
+    public void testCreateAddress() {
         HomePage homePage = new HomePage(driver, testProject.getUrl());
         LoginPage loginPage = homePage.openLoginPage();
         loginPage.loginAs(testUser);
         AddressPage addressPage = homePage.openAddressPage();
-        AddAddressPage addAddressPage = addressPage.openAddAddress();
+        AddAddressPage addAddressPage = addressPage.clickAddAddressLink();
         addAddressPage.fillNewAddress(userAddress);
         assert(addAddressPage.getNotification().contains("Your address was created."));
     }
 
-    @AfterSuite
+    @Test
+    public void testUpdateAddress() {
+        HomePage homePage = new HomePage(driver, testProject.getUrl());
+        LoginPage loginPage = homePage.openLoginPage();
+        loginPage.loginAs(testUser);
+        AddressPage addressPage = homePage.openAddressPage();
+        AddAddressPage addAddressPage = addressPage.clickUpdateAddressFirstInAList();
+        addAddressPage.updateAddress();
+    }
+
+    @Test
+    public void testRemoveAddress() {
+        HomePage homePage = new HomePage(driver, testProject.getUrl());
+        LoginPage loginPage = homePage.openLoginPage();
+        loginPage.loginAs(testUser);
+        AddressPage addressPage = homePage.openAddressPage();
+        addressPage.removeAddress();
+    }
+
+    @AfterMethod
     public void tearDown() {
         driver.quit();
     }
