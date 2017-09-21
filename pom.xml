@@ -21,6 +21,36 @@
             <version>6.11</version>
             <scope>test</scope>
         </dependency>
+
+        <!--Cucumber for TestNG dependencies-->
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>1.2.5</version>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-jvm-deps</artifactId>
+            <version>1.0.5</version>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>1.2.5</version>
+            <scope>compile</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>junit</groupId>
+                    <artifactId>junit</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>net.masterthought</groupId>
+            <artifactId>cucumber-reporting</artifactId>
+            <version>3.10.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -40,7 +70,7 @@
                 <version>2.20</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>${project.basedir}/tests.xml</suiteXmlFile>
+                        <suiteXmlFile>${project.basedir}/src/test/resources/testng_xmls/tests.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

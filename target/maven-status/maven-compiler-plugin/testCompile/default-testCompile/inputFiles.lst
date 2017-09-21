@@ -1,11 +1,6 @@
-/Users/rodionsavchuk/hybrisAutomation/training/src/test/java/Pages/LoginPage.java
-/Users/rodionsavchuk/hybrisAutomation/training/src/test/java/Locators/HomePageLocators.java
-/Users/rodionsavchuk/hybrisAutomation/training/src/test/java/Objects/UserAddress.java
-/Users/rodionsavchuk/hybrisAutomation/training/src/test/java/Objects/User.java
-/Users/rodionsavchuk/hybrisAutomation/training/src/test/java/Objects/TestProject.java
-/Users/rodionsavchuk/hybrisAutomation/training/src/test/java/Locators/AddAddressLocator.java
-/Users/rodionsavchuk/hybrisAutomation/training/src/test/java/Pages/AddAddressPage.java
-/Users/rodionsavchuk/hybrisAutomation/training/src/test/java/Pages/AddressPage.java
-/Users/rodionsavchuk/hybrisAutomation/training/src/test/java/Locators/AddressBookLocators.java
+/Users/rodionsavchuk/hybrisAutomation/training/src/test/java/definition_steps/Pages.java
+/Users/rodionsavchuk/hybrisAutomation/training/src/test/java/runners/TestNGExucutionListener.java
+/Users/rodionsavchuk/hybrisAutomation/training/src/test/java/definition_steps/GlobalElementsStepDefs.java
+/Users/rodionsavchuk/hybrisAutomation/training/src/test/java/AddressBookSuite.java
+/Users/rodionsavchuk/hybrisAutomation/training/src/test/java/runners/CucumberTestsRunner.java
 /Users/rodionsavchuk/hybrisAutomation/training/src/test/java/TestOOP/TestTestNG.java
-/Users/rodionsavchuk/hybrisAutomation/training/src/test/java/Pages/HomePage.java
