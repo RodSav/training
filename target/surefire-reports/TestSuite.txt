@@ -1,26 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 106.919 s <<< FAILURE! - in TestSuite
-testRemoveAddress(TestOOP.TestTestNG)  Time elapsed: 34.444 s  <<< FAILURE!
-org.openqa.selenium.NoSuchElementException: 
-Unable to locate element: html/body/main/div[3]/div[2]/div[2]/div/div[1]/div/div/a[2]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.5.2', revision: '10229a9', time: '2017-08-21T17:29:55.15Z'
-System info: host: 'Rodions-MacBook-Pro.local', ip: 'fe80:0:0:0:14a9:bbbc:a988:69d8%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.6', java.version: '1.8.0_111'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{moz:profile=/var/folders/_q/_7d1f_ys5hg5_f_jfs3jqgdm0000gn/T/rust_mozprofile.kmMJGjRvoZ1U, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=true, browserVersion=55.0.3, platformVersion=16.7.0, moz:processID=1644, browserName=firefox, javascriptEnabled=true, platformName=darwin}]
-Session ID: 56d3f7de-3d3d-1340-9c48-3662a7317da2
-*** Element info: {Using=xpath, value=html/body/main/div[3]/div[2]/div[2]/div/div[1]/div/div/a[2]}
-	at TestOOP.TestTestNG.testRemoveAddress(TestTestNG.java:76)
-
-testUpdateAddress(TestOOP.TestTestNG)  Time elapsed: 34.575 s  <<< FAILURE!
-org.openqa.selenium.TimeoutException: 
-Timeout loading page after 20000ms
-Build info: version: '3.5.2', revision: '10229a9', time: '2017-08-21T17:29:55.15Z'
-System info: host: 'Rodions-MacBook-Pro.local', ip: 'fe80:0:0:0:14a9:bbbc:a988:69d8%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.6', java.version: '1.8.0_111'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{moz:profile=/var/folders/_q/_7d1f_ys5hg5_f_jfs3jqgdm0000gn/T/rust_mozprofile.EEAIffLEMGXu, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=true, browserVersion=55.0.3, platformVersion=16.7.0, moz:processID=1649, browserName=firefox, javascriptEnabled=true, platformName=darwin}]
-Session ID: c13fb57b-6166-054e-8b57-df505910b3cf
-	at TestOOP.TestTestNG.testUpdateAddress(TestTestNG.java:66)
-
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 72.187 s - in TestSuite
