@@ -1,19 +1,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Suite1" verbose="1" >
-    <test name="Nopackage" >
+<suite name="Suite1" verbose="1">
+    <test name="address book">
         <classes>
-
-            <class name="TestOOP.TestTestNG" >
-
-                <methods>
-                    <include name="testCreateAddress" />
-                    <include name="testUpdateAddress" />
-                    <include name="testRemoveAddress" />
-                </methods>
-
-            </class>
-
+            <class name="AddressBookSuite"/>
         </classes>
     </test>
 </suite>

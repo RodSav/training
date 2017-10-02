@@ -1,9 +1,11 @@
-package Pages;
+package demo_project.Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import Objects.*;
-import static Locators.AddAddressLocator.*;
+import demo_project.Objects.*;
+import ru.yandex.qatools.allure.annotations.Step;
+
+import static demo_project.Locators.AddAddressLocator.*;
 
 public class AddAddressPage {
     private WebDriver driver;
@@ -12,6 +14,7 @@ public class AddAddressPage {
         this.driver = driver;
     }
 
+    @Step("Create new address")
     public AddAddressPage fillNewAddress(UserAddress userAddress) {
 //        driver.findElement(By.xpath(".//*[@id='address.country']")).click();
         driver.findElement(By.xpath(ADDRESS_COUNTRY_DROPDOWN_XPATH)).click();
@@ -36,6 +39,7 @@ public class AddAddressPage {
         return new AddAddressPage(driver);
     }
 
+    @Step("Update existing address")
     public AddAddressPage updateAddress() {
         driver.findElement(By.xpath(TITLE_MR_XPATH)).click();
         driver.findElement(By.xpath(FIRSTNAME_FIELD_XPATH)).clear();
@@ -48,6 +52,7 @@ public class AddAddressPage {
         return new AddAddressPage(driver);
     }
 
+    @Step("Get notification")
     public String getNotification() {
         return driver.findElement(By.xpath(FLASH_MESSAGE_XPATH)).getText();
     }

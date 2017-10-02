@@ -1,4 +1,4 @@
-package Objects;
+package demo_project.Objects;
 
 public class User {
     private String username;

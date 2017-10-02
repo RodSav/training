@@ -1,4 +1,4 @@
-package Objects;
+package demo_project.Objects;
 
 public class UserAddress {
     private final String country;

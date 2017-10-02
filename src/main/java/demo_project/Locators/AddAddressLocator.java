@@ -1,4 +1,4 @@
-package Locators;
+package demo_project.Locators;
 
 public class AddAddressLocator {
     public static String ADDRESS_COUNTRY_DROPDOWN_XPATH = ".//*[@id='address.country']";
